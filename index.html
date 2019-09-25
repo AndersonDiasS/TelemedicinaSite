@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> -->
+	<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+	<!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> -->
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="https://kit.fontawesome.com/f36ff0ffd5.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+
+			jQuery("#subirTopo").hide();
+
+			jQuery('a#subirTopo').click(function () {
+				jQuery('body,html').animate({
+					scrollTop: 0
+				}, 800);
+				return false;
+			});
+
+			jQuery(window).scroll(function () {
+				if (jQuery(this).scrollTop() > 1000) {
+					jQuery('#subirTopo').fadeIn();
+				} else {
+					jQuery('#subirTopo').fadeOut();
+				}
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$('.carousel').carousel({
+			interval: 1000 * 10
+		 
+		});
+	</script>
+
+
+	<script type="text/javascript">
+	$(document).ready(function(){
+		if (window.innerWidth > 768) {
+			$(".dropdown").hover(            
+				function() {
+					$('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown("400");
+					$(this).toggleClass('open');        
+				},
+				function() {
+					$('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).delay("400").slideUp("400");
+					$(this).toggleClass('open');       
+				}
+				);
+		}
+
+		else{
+			$(".dropdown").hover(            
+				function() {
+					$('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown("400");
+					$(this).toggleClass('click');        
+				},
+				function() {
+					$('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideUp("400");
+					$(this).toggleClass('click');       
+				}
+				);
+		}
+
+
+	});
+</script>
+
+
+  
+	
+
+</head>
+<body>
+	<div class="container-fluid" style=" padding-left: unset;padding-right: unset">
+		<nav class="navbar navbar-light" style="background: #1265b9;">
+			<div class="navbar-header">
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href=""><img src="img/Logo-text-white.png" class="img-responsive logo"></a>
+			</div>
+
+			<div class="collapse navbar-collapse js-navbar-collapse" >
+				<ul class="nav navbar-nav">
+					<li><a href="#inicio" active><i class="fas fa-home icone-menu"></i>Inicio</a></li>
+
+					<!-- <li class="dropdown mega-dropdown drop-aparecer" style="transition: 1s;">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-user-md icone-menu"></i>Consultas <span class="caret"></span></a>				
+						<ul class="dropdown-menu mega-dropdown-menu">
+							<li class="col-sm-3">
+								<img class="img-responsive medico-aparece" src="img/medico.png" style="width: 69%;margin-top: 26px;float: right;">
+							</li>
+							<li class="col-sm-3">
+								<ul>
+									<li class="dropdown-header">Áreas dos cursos</li>
+									<li class="primeiro-item dropdown"><a href="#"><i class="fas fa-calculator icone-cursos"></i>Área Financeira</a><div class="divider-custom"></div>
+									</li>
+									<li class="dropdown"><a href="#"><i class="fab fa-windows icone-cursos"></i>Área Microsoft Office</a><div class="divider-custom"></div>
+									</li>
+									<li class=" dropdown"><a href="#"><i class="fas fa-sitemap icone-cursos"></i>Área Gestão e Projetos</a><div class="divider-custom"></div>
+									</li>
+									<li class=" dropdown"><a href="#"><i class="fas fa-users icone-cursos"></i>Área Comportamental</a><div class="divider-custom"></div>
+									</li>
+									<li class=" dropdown"><a href="#"><i class="fas fa-briefcase icone-cursos"></i>Área Comercial</a><div class="divider-custom"></div>
+									</li>
+									<li class="dropdown"><a href="#"><i class="fas fa-id-card icone-cursos"></i>Área Recursos Humanos</a><div class="divider-custom"></div>
+									</li>
+								</ul>
+							</li>
+							<li class="col-sm-3">
+								<ul>
+									<li class="dropdown-header">Informações</li>
+									<li class="primeiro-item dropdown"><a href="#"><i class="fas fa-user-plus icone-cursos"></i>Inscrições Abertas</a><div class="divider-custom"></div>
+									</li>
+									<li class="dropdown"><a href="#"><i class="fas fa-calendar-check icone-cursos"></i>Calendário de Inscrições</a><div class="divider-custom"></div>
+									</li>
+									<li class=" dropdown"><a href="#"><i class="fas fa-calendar-alt icone-cursos"></i>Agenda</a><div class="divider-custom"></div>
+									</li>
+									<li class=" dropdown"><a href="#"><i class="fas fa-headphones icone-cursos"></i>Palestras</a><div class="divider-custom"></div>
+									</li>
+									<li class=" dropdown"><a href="#"><i class="fas fa-university  icone-cursos"></i>Cursos In Company</a><div class="divider-custom"></div>
+									</li>
+									<li class="dropdown"><a href="#"><i class="fas fa-th icone-cursos"></i>Ver Todas as Áreas</a><div class="divider-custom"></div>
+									</li>
+								</ul>
+							</li>
+							<li class="col-sm-3">
+								<ul>
+									<li class="dropdown-header">Inscreva-se Agora!</li>
+									 
+
+								</ul>
+							</li>
+
+						</ul>				
+					</li> -->
+					
+					<li><a href="#"><i class="fab fa-audible  icone-menu"></i>Porfólio</a></li>
+                    	<li><a href="#inicio" active><i class="fas  fa-calendar-check icone-menu"></i>Produtos</a></li>
+					<li class="dropdown mega-dropdown" style="transition: 1s;">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-link icone-menu"></i>Links <span class="caret"></span></a>				
+						<ul class="dropdown-menu mega-dropdown-menu">
+
+							<li class="col-sm-3">
+								<ul>
+									<li class="dropdown-header">Utilidade e Dicas</li>
+									
+									<li class="primeiro-item dropdown"><a href="#"><i class="fas fa-download icone-cursos"></i>Downloads</a><div class="divider-custom"></div>
+									</li>
+									<li class="dropdown"><a href="#"><i class="fas fa-file-excel icone-cursos"></i>Dicas de Excel</a><div class="divider-custom"></div>
+									</li>
+									<li class=" dropdown"><a href="#"><i class="fas fa-money-bill-alt icone-cursos"></i>Finanças Pessoais</a><div class="divider-custom"></div>
+									</li>
+									<li class=" dropdown"><a href="#"><i class="fas fa-hand-holding-usd icone-cursos"></i>Crédito x Cobrança</a><div class="divider-custom"></div>
+
+									</ul>
+								</li>
+								<li class="col-sm-3">
+									<ul>
+										<li class="dropdown-header">Informações</li>
+										<li class="primeiro-item dropdown"><a href="#"><i class="fas fa-camera-retro icone-cursos"></i>Galeria de Fotos</a><div class="divider-custom"></div>
+										</li>
+										<li class="dropdown"><a href="#"><i class="fas fa-list-ol icone-cursos"></i>Cursos Realizados</a><div class="divider-custom"></div>
+										</li>
+										<li class=" dropdown"><a href="#"><i class="fab fa-youtube icone-cursos"></i>Videos</a><div class="divider-custom"></div>
+										</li>
+										<li class=" dropdown"><a href="#"><i class="fas fa-edit icone-cursos"></i>Lista de Cursos para Inscrição</a><div class="divider-custom"></div>
+										</li>
+
+									</ul>
+								</li>
+								<li class="col-sm-3">
+									<ul>
+										<li class="dropdown-header">Saiba Mais</li>
+										<li class="primeiro-item dropdown"><a href="#"><i class="fas fa-handshake icone-cursos"></i>Nossos Clientes</a><div class="divider-custom"></div>
+										</li>
+										<li class="dropdown"><a href="#"><i class="fas fa-user-ninja icone-cursos"></i>Nossos Instrutores</a><div class="divider-custom"></div>
+										</li>
+										<li class=" dropdown"><a href="#"><i class="fas fa-shield-alt icone-cursos"></i>Politica de Privacidade</a><div class="divider-custom"></div>
+										</li>
+										<li class=" dropdown"><a href="#"><i class="fas fa-hand-holding-heart icone-cursos"></i>Responsabilidade Social</a><div class="divider-custom"></div>
+										</li>
+
+									</ul>
+								</li>
+								<li class="col-sm-3">
+									<img class="img-responsive medico-aparece" src="img/medico2.png" style="width: 60%;margin-top: 13px;float: left;">
+								</li>
+							</ul>				
+						</li>
+						<li class="dropdown mega-dropdown" style="transition: 1s;">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-newspaper icone-menu"></i>Blog 
+                                <span class="caret"></span></a>				
+							<ul class="dropdown-menu mega-dropdown-menu">
+								<li class="col-sm-3">
+									<img class="img-responsive medico-aparece" src="img/medico3.png" style="width: 50%;margin-left: 23%;">
+								</li>
+								<li class="col-sm-3">
+									<ul>
+										<li class="dropdown-header">Visite Nosso Blog</li>
+										<li class="primeiro-item dropdown"><a href="#"><i class="fas fa-book-reader icone-cursos"></i>Nosso blog</a><div class="divider-custom"></div>
+										</li>
+										<li class="dropdown"><a href="#"><i class="fas fa-newspaper icone-cursos"></i>Noticias</a><div class="divider-custom"></div>
+										</li>
+										<li class=" dropdown"><a href="#"><i class="fab fa-youtube icone-cursos"></i>Videos</a><div class="divider-custom"></div>
+										</li>
+										<li class=" dropdown"><a href="#"><i class="fas fa-book-open icone-cursos"></i>Artigos</a><div class="divider-custom"></div>
+										</li>
+
+									</ul>
+								</li>
+								<li class="col-sm-3">
+									<ul>
+										<li class="dropdown-header">Artigos Recomendados</li>
+										<li class=" dropdown"><a href="#"><img class="img-responsive" width="50px"  src="img/flor.png"><p class="text-center"></p></a></li>
+
+
+									</ul>
+								</li>
+								<li class="col-sm-3">
+
+								</li>
+
+							</ul>				
+						</li>
+
+						<li ><a class="nav-item scroll-page" href="#contato"><i class="fas fa-comments icone-menu"></i>Fale conosco</a></li>
+					<!-- <li class="dropdown text-left">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fas fa-user icone-menu"></i>Minha conta <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#"><i class="fas fa-user-circle icone-menu"></i>Perfil</a></li>
+							<li><a href="#"><i class="fas fa-dollar-sign icone-menu " style="margin-left: 3px;margin-right: 3px;"></i>Pagamentos</a></li>
+							<li><a href="#"><i class="fas fa-cog icone-menu"></i>Configurações</a></li>
+							<li class="divider"></li>
+							<li><a href="#"><i class="fas fa-power-off icone-menu"></i>Sair</a></li>
+						</ul>
+					</li> -->
+				</ul>
+
+			</div><!-- /.nav-collapse -->
+		</nav>
+
+	</div>
+	<div class="container-fluid" style="padding: unset;margin-top: -20px" id="inicio">
+		<div class="row">
+			<div class="col-md-12">
+				<!-- data-interval="10000" -->
+				<div id="carousel" class="carousel slide" data-ride="carousel" >
+					<ol class="carousel-indicators">
+						<li data-target="#carousel" data-slide-to="0" class="active"></li>
+						<li data-target="#carousel" data-slide-to="1"></li>
+						<li data-target="#carousel" data-slide-to="2"></li>
+						<!-- <li data-target="#carousel" data-slide-to="3"></li> -->
+					</ol>
+					<div class="carousel-inner">
+						<div class="item active ">
+							<img src="img/bg1.jpg" alt="Primeiro slide">
+							<div class="carousel-caption">
+								<h1 class="text-left">
+								Telemedicina</h1>
+								<br>
+								<a class="btn btn-clear btn-sm btn-min-block" style="margin-bottom: 10px;" href="telemedicina.html">Saiba mais Sobre...</a>
+
+							</div>
+						</div>
+						<div class="item">
+							<img src="img/bg2.png" alt="Segundo slide">
+							<div class="carousel-caption">
+								<h1 class="text-left">
+								Telenutrição</h1>
+								<br>
+								<a class="btn btn-clear btn-sm btn-min-block" style="margin-bottom: 10px;" href="#planos">Saiba mais Sobre ...</a>
+
+							</div>
+						</div>
+
+						<div class="item">
+							<img src="img/bg3.jpg" alt="Terceiro slide">
+							<div class="carousel-caption">
+								<h1 class="text-left">
+								Telepsicologia</h1>
+								<br>
+								<a class="btn btn-clear btn-sm btn-min-block" style="margin-bottom: 10px;" href="#contato">Entre em contato conosco</a>
+							</div>
+						</div>
+                    <!-- <div class="item">
+                    	<img src="http://placehold.it/1200x500/34495e/2c3e50" alt="Third slide">
+                    	<div class="carousel-caption">
+                    		<h3 class="text-left">
+                    		Terceiro slide</h3>
+                    		<p class="text-left">
+                    		Texto terceiro slide.</p>
+
+                    		<a class="btn btn-clear btn-sm btn-min-block" style="margin-bottom: 10px;" href="">Saiba mais Sobre o curso</a>
+
+                    	</div>
+                    </div> -->
+                </div>
+                <a class="left carousel-control" href="#carousel" data-slide="prev">
+                	<span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel" data-slide="next">
+                	<span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+    <div class="container">
+    	<div class="row" style="margin-top: 20px;">
+
+    		<div class="col-xs-12 col-sm-6 col-md-3">
+    			<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+    				<div class="mainflip">
+    					<div class="frontside">
+    						<div class="card " >
+    							<div class="card-body text-center">
+    								<i class="fas fa-stethoscope" style="font-size: 60px;color:  #1265b9;padding-top: 30px"></i>
+    								<h3 style="color:#1265b9 ">Médicos Especialistas</h3>
+    								<p style="color:#1265b9 ">Experientes no que fazem e de confiança</p>
+    							</div>
+    						</div>
+    					</div>
+    					<div class="backside">
+    						<div class="card" style="background:  #1265b9; color: white">
+    							<div class="card-body text-center">
+    								<i class="fa fa-puzzle-piece icone-animação" style="font-size: 60px;color:white;padding-top: 30px"></i>
+    								<h3 class="icone-animação">Sob Medida</h3>
+    								<p class="icone-animação">Consultas reprogramadas conforme sua necessidade</p>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="col-xs-12 col-sm-6 col-md-3">
+    			<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+    				<div class="mainflip">
+    					<div class="frontside">
+    						<div class="card">
+    							<div class="card-body text-center">
+    								<i class="fas fa-lightbulb" style="font-size: 60px;color:  #1265b9;padding-top: 30px"></i>
+    								<h3 style="color:#1265b9 ">Atendimento On-line</h3>
+    								<p style="color:#1265b9 ">Você não precisa sair do conforto de sua casa</p>
+    							</div>
+    						</div>
+    					</div>
+    					<div class="backside">
+    						<div class="card" style="background: #1265b9; color: white;">
+    							<div class="card-body text-center">
+    								<i class="fa fa-certificate icone-animação" style="font-size: 60px;color:white;padding-top: 30px"></i>
+    								<h3 class="icone-animação">Com Atestado</h3>
+    								<p class="icone-animação">Atestados e Receitas médicas disponibilizados na hora</p>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="col-xs-12 col-sm-6 col-md-3">
+    			<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+    				<div class="mainflip">
+    					<div class="frontside">
+    						<div class="card">
+    							<div class="card-body text-center">
+    								<i class="fa fa-briefcase" style="font-size: 60px;color: #1265b9;padding-top: 30px"></i>
+    								<h3 style="color: #1265b9">Em todo Brasil</h3>
+    								<p style="color: #1265b9">Não importa onde esteja</p>
+    							</div>
+    						</div>
+    					</div>
+    					<div class="backside">
+    						<div class="card" style="background: #1265b9; color: white;">
+    							<div class="card-body text-center">
+    								<i class="fa fa-road icone-animação" style="font-size: 60px;color:white;padding-top: 30px"></i>
+    								<h3 class="icone-animação">Vamos até você</h3>
+    								<p class="icone-animação" style="padding: 5px;">Nossa equipe vai até onde você estiver</p>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="col-xs-12 col-sm-6 col-md-3">
+    			<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+    				<div class="mainflip">
+    					<div class="frontside">
+    						<div class="card">
+    							<div class="card-body text-center">
+    								<i class="fas fa-graduation-cap" style="font-size: 60px;color: #1265b9;padding-top: 30px"></i>
+    								<h3 style="color: #1265b9">Equipe de Elite</h3>
+    								<p style="color: #1265b9">Desde os atendentes até os médicos</p>
+    							</div>
+    						</div>
+    					</div>
+    					<div class="backside">
+    						<div class="card" style="background:#1265b9; color: white;">
+    							<div class="card-body text-center">
+    								<i class="fa fa-history icone-animação" style="font-size: 60px;padding-top: 30px"></i>
+    								<h3 class="icone-animação">Seu Histórico de Consultas</h3>
+    								<p class="icone-animação" >Acompanhe sua Life line onde estiver </p>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    		
+    		
+
+
+
+    	</div>
+    </div>
+    <section style="background: #1265b9">
+    	<div class="container-fluid">
+    		<h1 class="text-center titulo-section" style="color:white">Sobre o Telemedicina</h1>
+    		<div class="container">
+    			<div class="row text-center">
+    				<br>
+    				<p style="color:white ">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMake
+
+    				</p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+    <section class="container-fluid bg-parallax1" id="serviços" style="padding: unset;">
+    	<div class="  "  >
+    		<div class="custom-background" style="padding-bottom: 50px;">
+
+    			<header class="col-md-12">
+    				<h1 class="text-center titulo-section" style="color:white ">Nossos Serviços</h1>
+    				<p class="text-center"></p>
+    			</header>
+    			<div class="container">
+    				<div class="col-md-3 col-sm-6 col-xs-12 margem-col">
+    					<div class="serviços">
+    						<i class="fas fa-user-injured fa-2x icone-animação"></i> <span style="font-size: 18px;
+    						vertical-align: super;padding-left: 5px;">Cadastro de Pacientes</span>
+    					</div>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 margem-col">
+    					<div class="serviços">
+    						<i class="fas fa-user-md fa-2x icone-animação"></i> <span style="font-size: 18px;
+    						vertical-align: super;padding-left: 5px;">Cadastro de Médicos</span>
+    					</div>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 margem-col">
+    					<div class="serviços">
+    						<i class="fas fa-address-card fa-2x icone-animação"></i> <span style="font-size: 18px;
+    						vertical-align: super;padding-left: 5px;">Cadastro de Convênios</span>
+    					</div>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 margem-col">
+    					<div class="serviços">
+    						<i class="fas fa-video fa-2x icone-animação"></i> <span style="font-size: 18px;
+    						vertical-align: super;padding-left: 5px;">Consulta em Video</span>
+    					</div>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 margem-col">
+    					<div class="serviços">
+    						<i class="fas fa-signal fa-2x icone-animação"></i> <span style="font-size: 18px;
+    						vertical-align: super;padding-left: 5px;">Teste de conexão</span>
+    					</div>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 margem-col">
+    					<div class="serviços">
+    						<i class="far fa-file-alt fa-2x icone-animação"></i> <span style="font-size: 18px;
+    						vertical-align: super;padding-left: 5px;">Atestados</span>
+    					</div>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 margem-col">
+    					<div class="serviços">
+    						<i class="fas fa-notes-medical fa-2x icone-animação"></i> <span style="font-size: 18px;
+    						vertical-align: super;padding-left: 5px;">Receitas médicas</span>
+    					</div>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 margem-col">
+    					<div class="serviços">
+    						<i class="fas fa-file-alt fa-2x icone-animação"></i> <span style="font-size: 18px;
+    						vertical-align: super;padding-left: 5px;">Declarações</span>
+    					</div>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 margem-col">
+    					<div class="serviços">
+    						<i class="fas fa-calendar-plus fa-2x icone-animação"></i> <span style="font-size: 18px;
+    						vertical-align: super;padding-left: 5px;">Agendamento Simples</span>
+    					</div>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 margem-col">
+    					<div class="serviços">
+    						<i class="fas fa-star fa-2x icone-animação"></i> <span style="font-size: 18px;
+    						vertical-align: super;padding-left: 5px;">Avaliações</span>
+    					</div>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 margem-col">
+    					<div class="serviços">
+    						<i class="fas fa-rss fa-2x icone-animação"></i> <span style="font-size: 18px;
+    						vertical-align: super;padding-left: 5px;">Acompanhamento</span>
+    					</div>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 margem-col">
+    					<div class="serviços">
+    						<i class="fas fa-chalkboard-teacher fa-2x icone-animação"></i> <span style="font-size: 18px;
+    						vertical-align: super;padding-left: 5px;">Tutorial de Uso</span>
+    					</div>
+
+
+    					
+    				</div>
+
+
+    			</div>
+
+    		</div>
+    	</div>
+	</section>
+
+   
+    <section class="container-fluid">
+
+    	<div class="container">
+    		<header class="col-md-12" style="padding-bottom: 50px;">
+    			<h1 class="text-center  titulo-section"  style="color:#1265b9 ">Conheça nossos parceiros</h1>
+    		</header>
+    		<div class="row" style="padding-bottom: 50px;">
+    			<div class="col-md-3 col-sm-3 col-lg-3 col-xs-6 padding-parceiros">
+
+    				<img src="img/Amil.png" class="img-fluid mx-auto d-block imagem-centro icone-animação" style="padding-top: 25px;padding-bottom: 20px">
+
+    			</div>
+    			<div class="col-md-3 col-sm-3 col-lg-3 col-xs-6 padding-parceiros">
+
+    				<img src="img/bradesco.png" class="img-fluid mx-auto d-block imagem-centro icone-animação" style="padding-top: 40px;padding-bottom: 34px">
+
+    			</div>
+    			<div class="col-md-3 col-sm-3 col-lg-3 col-xs-6 padding-parceiros">
+
+    				<img src="img/unimed.png" class="img-fluid mx-auto d-block imagem-centro icone-animação" style="padding-top: 33px;padding-bottom: 31px">
+
+    			</div>
+    			<div class="col-md-3 col-sm-3 col-lg-3 col-xs-6 padding-parceiros">
+
+    				<img src="img/sul.png" class="img-fluid mx-auto d-block imagem-centro icone-animação"style="padding-top: 30px;padding-bottom: 40px;">
+
+    			</div>
+    			<div class="col-md-3 col-sm-3 col-lg-3 col-xs-6 padding-parceiros">
+
+    				<img src="img/assim.jpg" class="img-fluid mx-auto d-block imagem-centro icone-animação" style="padding-top: 25px;padding-bottom: 20px">
+
+    			</div>
+    			<div class="col-md-3 col-sm-3 col-lg-3 col-xs-6 padding-parceiros">
+
+    				<img src="img/notre.png" class="img-fluid mx-auto d-block imagem-centro icone-animação" style="padding-top: 25px;padding-bottom: 20px">
+
+    			</div>
+    			<div class="col-md-3 col-sm-3 col-lg-3 col-xs-6 padding-parceiros">
+
+    				<img src="img/medsenior.png" class="img-fluid mx-auto d-block imagem-centro icone-animação" style="padding-top: 19px;padding-bottom: 20px">
+
+    			</div>
+    			<div class="col-md-3 col-sm-3 col-lg-3 col-xs-6 padding-parceiros">
+
+    				<img src="img/goodlife.jpg" class="img-fluid mx-auto d-block imagem-centro icone-animação" style="padding-top: 25px;padding-bottom: 20px">
+
+    			</div>
+    			
+
+    			
+    		</div>
+
+
+
+    	</div>
+    </div>
+
+</section>
+
+<section class="container-fluid bg-parallax-assinaturas" id="planos">
+	<div class="">
+		<div class="container ">
+			<header class="col-md-12">
+				<h1 class="text-center  titulo-section" style="color: white;">Assinaturas
+				</h1>
+				
+			</header>
+			<div class="row ">
+				<div class="col-sm-6 col-md-3 col-xs-12 text-center" >
+					<div class="tabela-preco sombra">
+						<div class="preco-detalhe">
+							<h2 class="text-center ">Plano Semanal</h2>
+							
+
+
+							<strike class="text-center">R$ 429,99</strike>
+							<span>R$ 19,99</span>
+							<ul>
+								<li>Vantagem</li>
+								<li>Vantagem</li>
+								<li>Vantagem</li>
+								<li>Vantagem</li>
+
+							</ul>
+						</div>
+						<div class="preco-botao">
+							<a href="#" class="btn btn-preco">Comprar agora </a>
+						</div>
+						<br>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-3 col-xs-12 text-center" >
+					<div class="tabela-preco sombra">
+						<div class="preco-detalhe">
+							<h2 class="text-center ">Plano Mensal</h2>
+							
+
+
+							<strike class="text-center">R$ 429,99</strike>
+							<span>R$ 19,99</span>
+							<ul>
+								<li>Vantagem</li>
+								<li>Vantagem</li>
+								<li>Vantagem</li>
+								<li>Vantagem</li>
+
+							</ul>
+						</div>
+						<div class="preco-botao">
+							<a href="#" class="btn btn-preco">Comprar agora </a>
+						</div>
+						<br>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-3 col-xs-12 text-center" >
+					<div class="tabela-preco sombra">
+						<div class="preco-detalhe">
+							<h2 class="text-center ">Plano Semestral</h2>
+							
+
+
+							<strike class="text-center">R$ 429,99</strike>
+							<span>R$ 19,99</span>
+							<ul>
+								<li>Vantagem</li>
+								<li>Vantagem</li>
+								<li>Vantagem</li>
+								<li>Vantagem</li>
+
+							</ul>
+						</div>
+						<div class="preco-botao">
+							<a href="#" class="btn btn-preco">Comprar agora </a>
+						</div>
+						<br>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-3 col-xs-12 text-center" >
+					<div class="tabela-preco sombra">
+						<div class="preco-detalhe">
+							<h2 class="text-center ">Plano Anual</h2>
+							
+
+
+							<strike class="text-center">R$ 429,99</strike>
+							<span>R$ 19,99</span>
+							<ul>
+								<li>Vantagem</li>
+								<li>Vantagem</li>
+								<li>Vantagem</li>
+								<li>Vantagem</li>
+
+							</ul>
+						</div>
+						<div class="preco-botao">
+							<a href="#" class="btn btn-preco">Comprar agora</a>
+						</div>
+						<br>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="contato" class="container-fluid bg-parallax1" style="padding: unset;">
+	<div class="  "  >
+		<div class="custom-background" style="padding-bottom: 50px;">
+
+			<header class="col-md-12">
+				<h1 class="text-center titulo-section" style="color:white ">Contato</h1>
+				<p class="text-center"></p>
+			</header>
+			<div class="container">
+				<div class="col-md-4 col-sm-4 col-lg-4">
+					<div class="box">
+						<div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+						<div class='details'><h4>Av. Vicente Machado, 2855 - Curitiba - PR</h4></div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 col-lg-4">
+					<div class="box ">
+						<div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+						<div class='details'><h3>+55 (41) 9 9999-9999</h3></div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4 col-lg-4">
+					<div class="box">
+						<div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+						<div class='details'><h3>email@gmail.com</h3></div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				
+				<div class="col-md-5" style="margin-top: 50px;color: white">
+					<h3>Ou nos mande uma mensagem!</h3>
+					<hr>
+
+				</div>
+
+				<div class="col-md-7 contact-form" style="margin-top: 100px;color: white">
+					<form id="contact" method="post" class="form" role="form">
+						<div class="row">
+							<div class="col-xs-6 col-md-6 form-group">
+								<label >Nome *</label>
+								<input class="form-control" id="nome" name="nome" placeholder="Nome" type="text" required />
+							</div>
+							<div class="col-xs-6 col-md-6 form-group">
+								<label >Email *</label>
+								<input class="form-control" id="email" name="email" placeholder="Email" type="email" required />
+								
+							</div>
+							<div class="col-xs-6 col-md-6 form-group">
+								<label >Telefone *</label>
+								<input class="form-control" id="telefone" name="telefone" placeholder="Telefone" required />
+							</div>
+							<div class="col-xs-6 col-md-6 form-group">
+								<label>Assunto *</label>
+								<input class="form-control" id="assunto" name="assunto" placeholder="Assunto" type="text" required />
+							</div>
+						</div>
+						<label>Mensagem *</label>
+						<textarea class="form-control" id="messagem" name="messagem" placeholder="Messagem" rows="5"></textarea>
+						<br />
+						<div class="row">
+							<div class="col-xs-12 col-md-12 form-group">
+								<button class="btn btn-primary" type="submit" style="float: right;">Enviar</button>
+
+							</div>
+						</div>
+					</form>
+
+
+				</div>
+			</div>
+		</div>
+		
+		<div class="custom-background-contato" >
+			<div class="container" style="padding-bottom: 40px;">
+				<h1 class="text-center" style="color: white; margin-top: 50px;">
+					<a href="" target="_blank"  rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a>
+					<a href="" target="_blank"  rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+				</h1>
+				
+				<h4 class="text-center"><b style="color: white">Faso - Fabrica de Software</b></h4>
+				
+				<div class="col-12 text-center" style="color: white">
+					Copyright © 2019 Desenvolvido por Faso
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<a id="subirTopo">
+	<i class="fas fa-chevron-up"></i>
+</a>
+<div class="wpp-aparece">
+	<a class="whatsapp" href="https://api.whatsapp.com/send?phone=55999999999&text=Queria uma informação" target="_blank"><i class="fab fa-whatsapp" style="font-size: 20px;vertical-align: middle;padding-right: 5px;"></i><span> Entre em contato conosco</span></a>
+</div>
+<div class="wpp-aparece-mobile">
+	<a class="whatsapp" href="https://api.whatsapp.com/send?phone=55999999999&text=Queria uma informação" target="_blank"><i class="fab fa-whatsapp" style="font-size: 20px;vertical-align: middle;"></i></a>
+</div>
+
+
+
+</body>
+</html>
