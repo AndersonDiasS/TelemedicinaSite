@@ -1,6 +1,20 @@
 $bold: 700
 $semi-bold: 600
-$white: white!important
+$white: #fff
+
+
+@mixin justify-center
+    display: flex
+    justify-content: center
+
+
+
+.mt-20
+    margin-top: 20px
+
+
+.mt-40
+    margin-top: 40px
 
 
 
@@ -24,3 +38,12 @@ $white: white!important
 .start
     background:linear-gradient(45deg,  #4095cc 0%,#002fbb 100%)!important
     color: $white
+
+
+.card
+    boder: 1px solid #ddd
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19)
+    margin-left: 4vw
+
+.justify-content-center
+    @include justify-center

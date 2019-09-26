@@ -355,9 +355,11 @@ a:hover {
 .bg-parallax{
   background: url(../img/medicina.jpg) fixed;
   position: relative;
+  
 }
 .bg-parallax1{
   background: url(../img/medicina.jpg) fixed;
+  background-blend-mode: brightness(0.5);
   position: relative;
 }
 .bg-parallax-assinaturas{

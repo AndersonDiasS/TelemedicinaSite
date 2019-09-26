@@ -40,25 +40,40 @@
 			continueOnHover : true,
 		});
 	</script>
-	<script type="text/javascript">
-		var timer;
 
-		$(".dropdown").on("mouseover", function() {
-			clearTimeout(timer);
-			openSubmenu();
-		}).on("mouseleave", function() {
-			timer = setTimeout(
-				closeSubmenu
-				, 1000);
-		});
+<script type="text/javascript">
+	$(document).ready(function(){
+		if (window.innerWidth > 768) {
+			$(".dropdown").hover(            
+				function() {
+					$('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown("400");
+					$(this).toggleClass('open');        
+				},
+				function() {
+					$('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).delay("400").slideUp("400");
+					$(this).toggleClass('open');       
+				}
+				);
+		}
 
-		function openSubmenu() {
-			$(".dropdown-menu").addClass("open");
+		else{
+			$(".dropdown").hover(            
+				function() {
+					$('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown("400");
+					$(this).toggleClass('click');        
+				},
+				function() {
+					$('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideUp("400");
+					$(this).toggleClass('click');       
+				}
+				);
 		}
-		function closeSubmenu() {
-			$(".dropdown-menu").removeClass("open");
-		}
-	</script>
+
+
+	});
+</script>
+
+
 	
 
 </head>
@@ -231,7 +246,7 @@
 					</li> -->
 				</ul>
 
-			</div><!-- /.nav-collapse -->
+			</div> 
 		</nav>
 
 	</div>
@@ -248,8 +263,87 @@
         Com a Telemedicina para Você, o médico tem um sistema em mãos que possibilita a leitura de todo o histórico do seu paciente, agilidade no atendimento, aumento de sua produtividade e segurança de ponta a ponta com dados criptografados.
     </div>
    
-</div>
-    </section>
+	</div>
+	</section>
+	
+	<section id="#Beneficios">
+		<div class="container">
+			<div class="row mt-40 justify-content-center">
+			<div class="card col-md-3">
+				<div class="card-body">
+					<h5 class="card-title"> Lorem ipsum </h5>
+					<p class="card-text">
+							Lorem ipsum
+					</p>
+				</div>
+
+			</div>
+
+			<div class="card col-md-3">
+				<div class="card-body">
+					<h5 class="card-title"> Lorem ipsum </h5>
+					<p class="card-text">
+							Lorem ipsum
+					</p>
+				</div>
+
+			</div>
+			
+
+			<div class="card col-md-3">
+					<div class="card-body">
+						<h5 class="card-title"> Lorem ipsum </h5>
+						<p class="card-text">
+							Lorem ipsum
+						</p>
+					</div>
+	
+				</div>
+		
+
+		</div>
+		<div class="col-md-12 co-sm-12 mt-40">
+				<div  class="row justify-content-center">
+				<div class="card col-md-3">
+						<div class="card-body">
+							<h5 class="card-title"> Lorem ipsum </h5>
+							<p class="card-text">
+									Lorem ipsum
+							</p>
+						</div>
+		
+					</div>
+
+					<div class="card col-md-3">
+							<div class="card-body">
+								<h5 class="card-title"> Lorem ipsum </h5>
+								<p class="card-text">
+										Lorem ipsum
+								</p>
+							</div>
+			
+						</div>
+
+					</div>
+					</div>
+
+		</div>
+	</section>
+	
+	<section class="start">
+		<div class="row Subtitle-content text-center">
+			<h2 class="Subtitle-archive">
+				Privacidade
+			</h2>
+		</div>
+		
+		<div class="container content-atribut">
+				A telemedicina permite que os médicos ou profissionais da área de saúde, diagnostiquem e tratem pacientes à distância, usando recursos e tecnologias de telecomunicações, diminuindo o tempo de espera e tempo de deslocamento do paciente.  
+		
+				Com a Telemedicina para Você, o médico tem um sistema em mãos que possibilita a leitura de todo o histórico do seu paciente, agilidade no atendimento, aumento de sua produtividade e segurança de ponta a ponta com dados criptografados.
+			</div>
+	</section>
+
 <section id="contato" class="container-fluid" style="padding: unset;">
 	<div class=" bg-parallax1 "  >
 		<div class="custom-background">
@@ -323,22 +417,25 @@
 			</div>
 		</div>
 		
-		<div class="custom-background-contato" style="margin-top: 100px;">
-			<div class="container" style="padding-bottom: 40px;">
-				<h1 class="text-center" style="color: white; margin-top: 50px;">
-					<a href="" target="_blank"  rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a>
-					<a href="" target="_blank"  rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-				</h1>
-				
-				<h4 class="text-center"><b style="color: white">Faso - Fabrica de Software</b></h4>
-				
-				<div class="col-12 text-center" style="color: white">
-					Copyright © 2019 Desenvolvido por Faso
-				</div>
-			</div>
+
+</section>
+
+<div class="custom-background-contato">
+	<div class="container" style="padding-bottom: 40px;">
+		<h1 class="text-center" style="color: white; margin-top: 50px;">
+			<a href="" target="_blank"  rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a>
+			<a href="" target="_blank"  rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+		</h1>
+		
+		<h4 class="text-center"><b style="color: white">Faso - Fabrica de Software</b></h4>
+		
+		<div class="col-12 text-center" style="color: white">
+			Copyright © 2019 Desenvolvido por Faso
 		</div>
 	</div>
-</section>
+</div>
+</div>
+
 <a id="subirTopo">
 	<i class="fas fa-chevron-up"></i>
 </a>
@@ -346,36 +443,7 @@
 	<a class="whatsapp" href="https://api.whatsapp.com/send?phone=55999999999&text=Queria uma informação sobre um produto" target="_blank"><i class="fab fa-whatsapp" style="font-size: 20px;vertical-align: middle;padding-right: 5px;"></i><span> Entre em contato conosco</span></a>
 </div>
 
-<script type="text/javascript">
-	$(document).ready(function(){
-		if (window.innerWidth > 768) {
-			$(".dropdown").hover(            
-			function() {
-				$('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown("400");
-				$(this).toggleClass('open');        
-			},
-			function() {
-				$('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideUp("400");
-				$(this).toggleClass('open');       
-			}
-			);
-		}
-		else{
-			$(".dropdown").hover(            
-			function() {
-				$('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown("400");
-				$(this).toggleClass('click');        
-			},
-			function() {
-				$('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideUp("400");
-				$(this).toggleClass('click');       
-			}
-			);
-		}
 
-
-	});
-</script>
 
 </body>
 </html>

@@ -1,3 +1,11 @@
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
 .item img {
   -webkit-filter: brightness(0.5);
           filter: brightness(0.5);
@@ -16,12 +24,28 @@
 
 .Subtitle-content h2 {
   font-weight: 700;
-  color: white !important;
+  color: #fff;
   margin-top: 5vh;
 }
 
 .start {
   background: linear-gradient(45deg, #4095cc 0%, #002fbb 100%) !important;
-  color: white !important;
+  color: #fff;
+}
+
+.card {
+  boder: 1px solid #ddd;
+  -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-left: 4vw;
+}
+
+.justify-content-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=custom.css.map */
