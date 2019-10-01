@@ -6,6 +6,27 @@
   margin-top: 40px;
 }
 
+#Beneficiopac {
+  height: 70vh;
+}
+
+.card-1 {
+  border: 2px solid #fff;
+  width: 25vw;
+  margin-top: 8vw;
+  margin-left: 4vw;
+  margin-right: 4vw;
+  text-align: center;
+  -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+}
+
+.content-1 {
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
 .item img {
   -webkit-filter: brightness(0.5);
           filter: brightness(0.5);
@@ -22,7 +43,7 @@
   margin-bottom: 5vh;
 }
 
-.Subtitle-content h2 {
+.start .Subtitle-content h2 {
   font-weight: 700;
   color: #fff;
   margin-top: 5vh;
