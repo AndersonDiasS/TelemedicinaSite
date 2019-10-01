@@ -488,6 +488,13 @@ a:hover {
 .container .box:hover .icon {
   transform:scale(0);
 }
+
+
+.item img {
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+}
+
 .container .box .details {
   position:absolute;
   top:0;
