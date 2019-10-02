@@ -6,8 +6,20 @@
   margin-top: 40px;
 }
 
+#start {
+  height: 60vh;
+}
+
 #Beneficiopac {
+  height: 60vh;
+}
+
+#Beneficios {
   height: 70vh;
+}
+
+#private {
+  height: 60vh;
 }
 
 .card-1 {
@@ -22,20 +34,22 @@
   border-radius: 5px;
 }
 
+.card-title img {
+  width: 8vw;
+}
+
 .content-1 {
   padding: 10px;
   font-size: 1.5rem;
 }
 
-
 .content-atribut {
   font-size: 1.9rem;
   text-align: justify;
-  height: 40vh;
 }
 
 .Subtitle-content {
-  margin-top: 2vh;
+  margin-top: 10vh;
   margin-bottom: 5vh;
 }
 
