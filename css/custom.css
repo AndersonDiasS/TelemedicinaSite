@@ -22,6 +22,10 @@
   height: 60vh;
 }
 
+.navbar {
+  margin-bottom: 0px !important;
+}
+
 .card-1 {
   border: 2px solid #fff;
   width: 25vw;
@@ -59,9 +63,25 @@
   margin-top: 5vh;
 }
 
-.start {
+.start-linear {
   background: linear-gradient(45deg, #4095cc 0%, #002fbb 100%) !important;
   color: #fff;
+}
+
+.start {
+  color: white;
+  background-image: url("../img/bg1.jpg");
+}
+
+.start-nutricao {
+  color: white;
+  background-image: url("../img/bg2.jpg");
+}
+
+.start-psicologia {
+  color: white;
+  background-image: url("../img/bg3.jpg");
+  background-position: 49px -95px;
 }
 
 .card {
